@@ -6,3 +6,14 @@ D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode
 D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.csproj.GenerateResource.cache
 D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.exe
 D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.pdb
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.Form1.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.SignIn.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.AdminUser.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.BusinessManage.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.OrdersHistory.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.ProductsManage.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.UserManage.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.NormalUser.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.AccountManage.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.OrdersManage.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.UpdatePassword.resources

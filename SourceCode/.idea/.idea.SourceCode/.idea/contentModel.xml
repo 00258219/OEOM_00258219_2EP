@@ -6,8 +6,6 @@
     <e p="D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
-      <e p="Form1.cs" t="Include" />
-      <e p="Form1.Designer.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
@@ -18,8 +16,47 @@
         <e p="Settings.Designer.cs" t="Include" />
         <e p="Settings.settings" t="Include" />
       </e>
+      <e p="Resources" t="Include">
+        <e p="icon.ico" t="Include" />
+        <e p="logo.png" t="Include" />
+      </e>
       <e p="SourceCode.csproj" t="IncludeRecursive" />
       <e p="SourceCode.sln" t="IncludeFlat" />
+      <e p="Vista" t="Include">
+        <e p="AccountManage.cs" t="Include" />
+        <e p="AccountManage.Designer.cs" t="Include" />
+        <e p="AccountManage.resx" t="Include" />
+        <e p="AdminUser.cs" t="Include" />
+        <e p="AdminUser.Designer.cs" t="Include" />
+        <e p="AdminUser.resx" t="Include" />
+        <e p="BusinessManage.cs" t="Include" />
+        <e p="BusinessManage.Designer.cs" t="Include" />
+        <e p="BusinessManage.resx" t="Include" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="NormalUser.cs" t="Include" />
+        <e p="NormalUser.Designer.cs" t="Include" />
+        <e p="NormalUser.resx" t="Include" />
+        <e p="OrdersHistory.cs" t="Include" />
+        <e p="OrdersHistory.Designer.cs" t="Include" />
+        <e p="OrdersHistory.resx" t="Include" />
+        <e p="OrdersManage.cs" t="Include" />
+        <e p="OrdersManage.Designer.cs" t="Include" />
+        <e p="OrdersManage.resx" t="Include" />
+        <e p="ProductsManage.cs" t="Include" />
+        <e p="ProductsManage.Designer.cs" t="Include" />
+        <e p="ProductsManage.resx" t="Include" />
+        <e p="SignIn.cs" t="Include" />
+        <e p="SignIn.Designer.cs" t="Include" />
+        <e p="SignIn.resx" t="Include" />
+        <e p="UpdatePassword.cs" t="Include" />
+        <e p="UpdatePassword.Designer.cs" t="Include" />
+        <e p="UpdatePassword.resx" t="Include" />
+        <e p="UserManage.cs" t="Include" />
+        <e p="UserManage.Designer.cs" t="Include" />
+        <e p="UserManage.resx" t="Include" />
+      </e>
     </e>
   </component>
 </project>

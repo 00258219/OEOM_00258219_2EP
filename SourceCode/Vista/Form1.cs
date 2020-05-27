@@ -15,6 +15,7 @@ namespace SourceCode
         public Form1()
         {
             InitializeComponent();
+            this.panel1.Controls.Add(new SignIn());
         }
     }
 }
