@@ -1,0 +1,8 @@
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\bin\Debug\SourceCode.exe.config
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\bin\Debug\SourceCode.exe
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\bin\Debug\SourceCode.pdb
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.csprojAssemblyReference.cache
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.Properties.Resources.resources
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.csproj.GenerateResource.cache
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.exe
+D:\Users\oscarorellana\Desktop\OEOM_00258219_2EP\SourceCode\obj\Debug\SourceCode.pdb
