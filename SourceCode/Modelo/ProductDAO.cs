@@ -8,21 +8,49 @@ namespace SourceCode.Modelo
     public class ProductDAO
     {
     //Obtener todos los productos de un negocio (segun id)
-        public static List<Business> GetList(int qry)
+        public static List<Product> GetList(int qry)
         {
             try
             {
-                string sql = $"SELECT p.idProduct, p.name FROM PRODUCT p WHERE idBusiness = {qry}";
+                string sql = $"SELECT * FROM PRODUCT WHERE idBusiness = {qry}";
 
                 DataTable dt = ConnectionDB.ExecuteQuery(sql);
 
-                List<Business> lista = new List<Business>();
+                List<Product> lista = new List<Product>();
                 foreach (DataRow fila in dt.Rows)
                 {
-                    Business u = new Business();
+                    Product u = new Product();
                     u.id = Convert.ToInt32(fila[0]);
-                    u.name = fila[1].ToString();
-                    u.description = fila[2].ToString();
+                    u.name = fila[2].ToString();
+                    u.idBusiness = Convert.ToInt32(fila[1]);
+
+                    lista.Add(u);
+                }
+                return lista;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar datos");
+                return null;
+            }
+        }
+        
+        //Obtener todos los productos
+        public static List<Product> GetListComplete()
+        {
+            try
+            {
+                string sql = $"SELECT * FROM PRODUCT";
+
+                DataTable dt = ConnectionDB.ExecuteQuery(sql);
+
+                List<Product> lista = new List<Product>();
+                foreach (DataRow fila in dt.Rows)
+                {
+                    Product u = new Product();
+                    u.id = Convert.ToInt32(fila[0]);
+                    u.name = fila[2].ToString();
+                    u.idBusiness = Convert.ToInt32(fila[1]);
 
                     lista.Add(u);
                 }
@@ -36,12 +64,12 @@ namespace SourceCode.Modelo
         }
         
         //Obtener todos los productos de todos los negocio (unico query que cambie o es "propio") 
-        public static DataTable SelectFromBusiness()
+        public static DataTable SelectFromProduct()
         {
             try
             {
-                var dt = ConnectionDB.ExecuteQuery($"SELECT p.idProduct, p.name, b.name FROM PRODUCT p, " +
-                                                   $"b BUSINESS WHERE p.idBusiness = b.idBusiness");
+                var dt = ConnectionDB.ExecuteQuery($"SELECT p.idProduct, p.name, b.name AS \"negocio\" FROM PRODUCT p, " +
+                                                   $"BUSINESS b WHERE p.idBusiness = b.idBusiness");
                 return  dt;
             }
             catch (Exception ex)

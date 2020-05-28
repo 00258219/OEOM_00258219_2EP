@@ -41,7 +41,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 480);
+            this.panel1.Size = new System.Drawing.Size(880, 560);
             this.panel1.TabIndex = 0;
             // 
             // Form1

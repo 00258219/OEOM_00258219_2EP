@@ -94,6 +94,7 @@ namespace SourceCode
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(415, 338);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(250, 23);
             this.textBox2.TabIndex = 4;
             // 

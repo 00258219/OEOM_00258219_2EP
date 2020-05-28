@@ -12,9 +12,10 @@ namespace SourceCode.Modelo
         {
             try
             { 
-                string sql = "SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, "+ 
-                "ad.address FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au WHERE ao.idProduct = pr.idProduct " +
-                $"AND ao.idAddress = ad.idAddress AND ad.idUser = au.idUser AND au.idUser = {CurrentUser.User.id};";
+                string sql = "SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, "+
+                             "ad.address FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au "+
+                             "WHERE ao.idProduct = pr.idProduct AND ao.idAddress = ad.idAddress "+
+                             $"AND ad.idUser = au.idUser AND au.idUser = {CurrentUser.User.id};";
 
                 DataTable dt = ConnectionDB.ExecuteQuery(sql);
 
@@ -23,9 +24,9 @@ namespace SourceCode.Modelo
                 {
                     Order u = new Order();
                     u.id = Convert.ToInt32(fila[0]);
-                    u.date = Convert.ToDateTime(fila[1]);
-                    u.idProduct = Convert.ToInt32(fila[2]);
-                    u.idAddres = Convert.ToInt32(fila[3]);
+                    u.date = fila[1].ToString();
+                    u.product = fila[2].ToString();
+                    u.address = fila[4].ToString();
 
                     lista.Add(u);
                 }
@@ -43,9 +44,10 @@ namespace SourceCode.Modelo
         {
             try
             { 
-                var dt = ConnectionDB.ExecuteQuery("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, "+ 
-                "ad.address FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au WHERE ao.idProduct = pr.idProduct " +
-                $"AND ao.idAddress = ad.idAddress AND ad.idUser = au.idUser AND au.idUser = {CurrentUser.User.id};");
+                var dt = ConnectionDB.ExecuteQuery("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, "+
+                                                   "ad.address FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au "+
+                                                   "WHERE ao.idProduct = pr.idProduct AND ao.idAddress = ad.idAddress "+
+                                                   $"AND ad.idUser = au.idUser AND au.idUser = {CurrentUser.User.id};");
                 
                 return  dt;
             }
@@ -80,7 +82,7 @@ namespace SourceCode.Modelo
             try
             {
                 string sql = String.Format("INSERT INTO APPORDER(createDate, idProduct, idAddress) " +
-                                           $"values({qry});");
+                                           $"values('{DateTime.Now.ToString("yyyy-MM-dd")}', {qry});");
                 //VALUES('26-05-2020', 1, 1);
             
                 ConnectionDB.ExecuteNonQuery(sql);

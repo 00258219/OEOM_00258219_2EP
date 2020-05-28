@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SourceCode.Modelo
 {
@@ -10,6 +11,14 @@ namespace SourceCode.Modelo
             get => user;
             set => user = value;
         }
+        
+        private static List<string> usersname = new List<string>();
+        public static List<string> Usersname => usersname;
+        public static void AddUsername(string s)
+        {
+            usersname.Add(s);
+        }
+        
         
         // private static string user;
         // public static string User

@@ -7,7 +7,7 @@ namespace SourceCode.Modelo
     {
         
         private static readonly string sConnection =
-            "Host=127.0.0.1;Port=5432;User Id=postgres;Password=123;Database=Preparcial;";
+            "Host=127.0.0.1;Port=5432;User Id=postgres;Password=123;Database=Parcial2;";
 
         public static DataTable ExecuteQuery(string query)
         {

@@ -96,6 +96,7 @@ namespace SourceCode
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(414, 278);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(250, 23);
             this.textBox2.TabIndex = 4;
             // 
@@ -110,7 +111,7 @@ namespace SourceCode
             this.button1.Location = new System.Drawing.Point(528, 469);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 62);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -126,7 +127,7 @@ namespace SourceCode
             this.button2.Location = new System.Drawing.Point(189, 469);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(178, 62);
-            this.button2.TabIndex = 6;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -176,7 +177,7 @@ namespace SourceCode
             this.label3.Location = new System.Drawing.Point(63, 340);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(304, 100);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Contraseña Nueva";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -186,7 +187,7 @@ namespace SourceCode
             this.textBox3.Location = new System.Drawing.Point(414, 378);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(250, 23);
-            this.textBox3.TabIndex = 8;
+            this.textBox3.TabIndex = 5;
             // 
             // UpdatePassword
             // 

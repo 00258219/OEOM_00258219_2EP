@@ -65,6 +65,21 @@ namespace SourceCode.Modelo
             }
         }
         
+        //Obtener todas las direcciones de un usuario (segun id)
+        public static DataTable SelectAddressFromUsuario()
+        {
+            try
+            {
+                var dt = ConnectionDB.ExecuteQuery($"SELECT ad.idAddress, ad.address FROM ADDRESS ad WHERE idUser = {CurrentUser.User.id}");
+                return  dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos");
+                return null;
+            }
+        }
+        
         //Obtener todos los usuarios
         public static DataTable SelectFromUsuario()
         {
@@ -121,7 +136,7 @@ namespace SourceCode.Modelo
         {
             try
             {
-                string sql = String.Format($"UPDATE APPUSER SET password = '{qry}' WHERE idAddress = {CurrentUser.User.id}");
+                string sql = String.Format($"UPDATE APPUSER SET password = '{qry}' WHERE idUser = {CurrentUser.User.id}");
 
                 ConnectionDB.ExecuteNonQuery(sql);
                 MessageBox.Show("Tu contraseña fue actualizada");
@@ -133,11 +148,11 @@ namespace SourceCode.Modelo
         }
         
         //Actualizar direccion de usuario
-        public static void UpdateAddress(string qry)
+        public static void UpdateAddress(string qry, int ida)
         {
             try
             {
-                string sql = String.Format($"UPDATE ADDRESS SET address = '{qry}' WHERE idAddress = {CurrentUser.User.id}");
+                string sql = String.Format($"UPDATE ADDRESS SET address = '{qry}' WHERE idAddress = {ida}");
 
                 ConnectionDB.ExecuteNonQuery(sql);
                 MessageBox.Show("Tu dirección fue actualizada");
