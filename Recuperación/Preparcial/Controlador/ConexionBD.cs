@@ -9,8 +9,8 @@ namespace Preparcial.Controlador
         private static string cadenaC = "Server=127.0.0.1;" +
                                         "Port=5432;" +
                                         "UserId=postgres;" +
-                                        "Password=uca;" +
-                                        "Database=preparcial;";
+                                        "Password=123;" +
+                                        "Database=Recuperacion;";
 
         // Ejecutar consulta (Comando SELECT)
         public static DataTable EjecutarConsulta(string consulta)

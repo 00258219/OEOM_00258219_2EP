@@ -8,12 +8,16 @@ namespace Preparcial.Vista
 {
     public partial class FrmMain : Form
     {
-        private Usuario u;
+        //10 Correcion: Inicializar variable
+        private Usuario u = null;
 
         public FrmMain(Usuario u)
         {
             InitializeComponent();
             this.u = u;
+            
+            //6 Correcion: el text no correspondia a la accion.
+            this.groupBox3.Text = "Actualizar Stock";
         }
 
         private void bttnCreateUser_Click(object sender, EventArgs e)
@@ -22,6 +26,7 @@ namespace Preparcial.Vista
             {
                 ControladorUsuario.CrearUsuario(txtNewUser.Text);
                 ActualizarCrearUsuario();
+                
             }
         }
 
@@ -43,6 +48,8 @@ namespace Preparcial.Vista
         private void ActualizarOrdenesUsuario()
         {
             dgvMyOrders.DataSource = ControladorPedido.GetPedidosUsuarioTable(u.IdUsuario);
+            //Correcion: Inicializar variable
+            cmbProductMakeOrder.DataSource = null;
             cmbProductMakeOrder.ValueMember = "idarticulo";
             cmbProductMakeOrder.DisplayMember = "producto";
             cmbProductMakeOrder.DataSource = ControladorInventario.GetProductos();
@@ -50,14 +57,17 @@ namespace Preparcial.Vista
 
         private void bttnAddInventary_Click(object sender, EventArgs e)
         {
-            if (txtProductNameInventary.Text.Equals("") &&
-                txtDescriptionInventary.Text.Equals("") &&
-                txtPriceInventary.Text.Equals("") &&
+            //5 Correcion: Si almenos uno esta vacio debe saltar el mensaje, no si todos estan vacios.
+            if (txtProductNameInventary.Text.Equals("") ||
+                txtDescriptionInventary.Text.Equals("") ||
+                txtPriceInventary.Text.Equals("") ||
                 txtStockInventary.Text.Equals(""))
                 MessageBox.Show("No puede dejar campos vacios");
             else
             {
-                ControladorInventario.AnadirProducto(txtProductNameInventary.Text, txtDescriptionInventary.Text,
+                //9 Correcion: Buenas practicas (pasa la linea)
+                ControladorInventario.AnadirProducto(txtProductNameInventary.Text,
+                    txtDescriptionInventary.Text,
                     txtPriceInventary.Text, txtStockInventary.Text);
 
                 ActualizarInventario();
@@ -77,7 +87,8 @@ namespace Preparcial.Vista
 
         private void bttnUpdateStockInventary_Click(object sender, EventArgs e)
         {
-            if (txtUpdateStockIdInventary.Text.Equals("") && txtUpdateStockInventary.Text.Equals(""))
+            // 8 Correcion: aqui debe ser un 'or' para que ningun campo quede vacio
+            if (txtUpdateStockIdInventary.Text.Equals("") || txtUpdateStockInventary.Text.Equals(""))
                 MessageBox.Show("No puede dejar campos vacios");
             else
             {
@@ -92,7 +103,9 @@ namespace Preparcial.Vista
                 MessageBox.Show("No puede dejar campos vacios");
             else
             {
-                ControladorPedido.HacerPedido(u.IdUsuario, cmbProductMakeOrder.SelectedValue.ToString(), txtMakeOrderQuantity.Text);
+                //Correcion: Buenas practicas (pasa la linea)
+                ControladorPedido.HacerPedido(u.IdUsuario, cmbProductMakeOrder.SelectedValue.ToString(), 
+                    txtMakeOrderQuantity.Text);
                 ActualizarOrdenesUsuario();
             }
         }
@@ -110,6 +123,9 @@ namespace Preparcial.Vista
 
             else if (tabControl1.SelectedTab.Name.Equals("viewOrdersTab") && u.Admin)
                 ActualizarOrdenes();
+            //4 Correcion: En ninguno de los casos al volver al 'generalTab' debe apararecer un mensaje
+            else if (tabControl1.SelectedTab.Name.Equals("generalTab"))
+                return;
             
             else
             {
@@ -121,7 +137,8 @@ namespace Preparcial.Vista
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-    Application.Exit();
+            //Correcion: Buenas practicas
+            Application.Exit();
         }
     }
 }

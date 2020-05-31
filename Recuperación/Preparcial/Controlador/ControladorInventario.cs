@@ -65,7 +65,7 @@ namespace Preparcial.Controlador
         {
             try
             {
-                ConexionBD.EjecutarComando("INSERT INTO INVENTARIO(nombreArticulo, descripcion, precio, stock)" +
+                ConexionBD.EjecutarComando("INSERT INTO INVENTARIO(nombreArt, descripcion, precio, stock)" +
                     $" VALUES('{nombre}', '{descripcion}', {precio}, {stock})");
 
                 MessageBox.Show("Se ha agregado el producto");

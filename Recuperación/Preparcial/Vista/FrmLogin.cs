@@ -29,7 +29,8 @@ namespace Preparcial
         private void PoblarControlers()
         {
             cmbUser.DataSource = null;
-            cmbUser.ValueMember = "Contrasenia";
+            //1 Correcion: En la clase Usuario para obtener la password es con 'Contrasena' no 'Contrasenia'
+            cmbUser.ValueMember = "Contrasena";          
             cmbUser.DisplayMember = "NombreUsuario";
             cmbUser.DataSource = ControladorUsuario.GetUsuarios();
         }
